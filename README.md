@@ -1,30 +1,31 @@
 # Docker Laravel
 
-#### 1. Clone project  
+#### . Clone project  
+`git clone https://github.com/gabrielprogramadorweb/laravel9-docker.git`
 
+#### . Navigate in project directory  
+`cd laravel9-docker`
 
-#### 2. Navigate in project directory  
-`cd docker-laravel`
-
-#### 3. Composer install
-On Linux/MacOS: `docker run --rm -v $(pwd):/app composer install`  
-On Windows in PowerShell: `docker run --rm -v ${PWD}:/app composer install`  
-On Windows in CMD: `docker run --rm -v %cd%:/app composer install`  
-
-#### 4. Create .env file
+#### . Create .env file
 `cp .env.example .env`  
 
-#### 5. Start everything
-`docker-compose up`  
+#### . Start everything
+`docker-compose up -d --build`  
 
-#### 6. Generate key for Laravel application
-`docker-compose exec app php artisan key:generate`  
+#### Composer
+
+` docker compose exec php bash`
+###
+`composer install`
+
+#### . Generate key for Laravel application
+`php artisan key:generate`  
 
 #### 7. Profit
 Enter on http://localhost  
 
 .env:
-
+```
 APP_NAME=Laravel
 APP_ENV=local
 APP_KEY=
@@ -83,5 +84,7 @@ VITE_PUSHER_HOST="${PUSHER_HOST}"
 VITE_PUSHER_PORT="${PUSHER_PORT}"
 VITE_PUSHER_SCHEME="${PUSHER_SCHEME}"
 VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+
+```
 
 
