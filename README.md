@@ -21,8 +21,6 @@
 #### . Generate key for Laravel application
 `php artisan key:generate`  
 
-#### 7. Profit
-Enter on http://localhost  
 
 .env:
 ```
